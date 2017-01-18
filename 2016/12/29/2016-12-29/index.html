@@ -6,14 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Dengwb Blog</title>
+  <title>vue-cli与node6.x、win10x64的不兼容 | Dengwb Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dengwb Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="在很久之前，自己搭建了一套vue框架。运用了vuex、vue-router、vue-resource 等等的一套比较完成的Demo。最近无意间升级了node^6.2.0、公司的电脑系统为win10 x64,然后整个vue都启动不了了。而同样的环境 mac是可以的。很是费解。
+提示的错误是不识别es6。找了一天走了很多弯路，以为是webpack问题、babel问题。其实都不是。
+最后找到了一个人这么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli与node6.x、win10x64的不兼容">
+<meta property="og:url" content="http://yoursite.com/2016/12/29/2016-12-29/index.html">
 <meta property="og:site_name" content="Dengwb Blog">
+<meta property="og:description" content="在很久之前，自己搭建了一套vue框架。运用了vuex、vue-router、vue-resource 等等的一套比较完成的Demo。最近无意间升级了node^6.2.0、公司的电脑系统为win10 x64,然后整个vue都启动不了了。而同样的环境 mac是可以的。很是费解。
+提示的错误是不识别es6。找了一天走了很多弯路，以为是webpack问题、babel问题。其实都不是。
+最后找到了一个人这么">
+<meta property="og:updated_time" content="2016-12-29T11:41:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dengwb Blog">
+<meta name="twitter:title" content="vue-cli与node6.x、win10x64的不兼容">
+<meta name="twitter:description" content="在很久之前，自己搭建了一套vue框架。运用了vuex、vue-router、vue-resource 等等的一套比较完成的Demo。最近无意间升级了node^6.2.0、公司的电脑系统为win10 x64,然后整个vue都启动不了了。而同样的环境 mac是可以的。很是费解。
+提示的错误是不识别es6。找了一天走了很多弯路，以为是webpack问题、babel问题。其实都不是。
+最后找到了一个人这么">
   
     <link rel="alternative" href="/atom.xml" title="Dengwb Blog" type="application/atom+xml">
   
@@ -135,103 +145,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-2016-12-29" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      vue-cli与node6.x、win10x64的不兼容
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/29/2016-12-29/" class="archive-article-date">
+
+        <a href="/2016/12/29/2016-12-29/" class="archive-article-date">
   	<time datetime="2016-12-29T11:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/29/2016-12-29/">vue-cli与node6.x、win10x64的不兼容</a>
-    </h1>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在很久之前，自己搭建了一套vue框架。运用了vuex、vue-router、vue-resource 等等的一套比较完成的Demo。<br>最近无意间升级了node^6.2.0、公司的电脑系统为win10 x64,<br>然后整个vue都启动不了了。而同样的环境 mac是可以的。很是费解。</p>
+<p>提示的错误是不识别es6。找了一天走了很多弯路，以为是webpack问题、babel问题。其实都不是。</p>
+<p>最后找到了一个人这么说：<br>The vuejs-templates/webpack seems to have problems with Node ^6.0.0 running on Windows 10 x64, something with Babel not transpiling JavaScript files before the Webpack build. I filled an issue in the repo, hope it gets fixed soom to come back to the latest Node release.</p>
+<p>我便把node升级到7。可以了。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/29/2016-12-29/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/23/2016-12-23/" class="archive-article-date">
-  	<time datetime="2016-12-23T08:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/23/2016-12-23/">数组去重装X法</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/12/2017-01-12/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          细节注意（一） - 浏览器缓存
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/23/2016-12-23/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数组去重装X法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/23/hello-world/" class="archive-article-date">
-  	<time datetime="2016-12-23T08:36:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/23/hello-world/">Hello World</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
 
 
           </div>
@@ -254,8 +305,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

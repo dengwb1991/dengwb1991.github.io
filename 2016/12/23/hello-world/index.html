@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Dengwb Blog</title>
+  <title>Hello World | Dengwb Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dengwb Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2016/12/23/hello-world/index.html">
 <meta property="og:site_name" content="Dengwb Blog">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:updated_time" content="2016-12-23T08:36:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dengwb Blog">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
   
     <link rel="alternative" href="/atom.xml" title="Dengwb Blog" type="application/atom+xml">
   
@@ -135,229 +142,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2017-01-18" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/18/2017-01-18/">细节注意（二） - for in</a>
-    </h1>
-  
-
-        <a href="/2017/01/18/2017-01-18/" class="archive-article-date">
-  	<time datetime="2017-01-18T08:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="官方"><a href="#官方" class="headerlink" title="官方"></a>官方</h2><p>for..in 语句用于对数组或者对象的属性进行循环操作。<br>循环中的代码每执行一次，就会对数组的元素或者对象的属性进行一次操作。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>如果为Array的原型链添加属性方法的话，该属性方法会执行一次。<br>如果遍历的数组内存储的不是Object 尽量别用for..in</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/18/2017-01-18/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-01-12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/12/2017-01-12/">细节注意（一） - 浏览器缓存</a>
-    </h1>
-  
-
-        <a href="/2017/01/12/2017-01-12/" class="archive-article-date">
-  	<time datetime="2017-01-12T11:58:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-12</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="操作localStorage、sessionStorage"><a href="#操作localStorage、sessionStorage" class="headerlink" title="操作localStorage、sessionStorage"></a>操作localStorage、sessionStorage</h3><p>对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。<br>要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。<br>所以当你存储Object或者Array时，一定要转化为String。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, [1, 2, 3]);</div></pre></td></tr></table></figure>
-<p>这样操作后，你所存的arr会是 1,2,3;</p>
-<p>正确的方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, JSON.stringify([1, 2, 3]));</div></pre></td></tr></table></figure></p>
-<p>这样操作后，你所存的arr会是[1,2,3];</p>
-<p>而获取时要想获得数组的话，需要<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JSON.parse(<span class="built_in">local</span>Storage.getItem(<span class="string">'arr'</span>));</div></pre></td></tr></table></figure></p>
-<p>同理操作Object也是需要这样操作。</p>
-<p>最最要注意的是如果你要set一个Number，取出来的时候要进行转化，否则运算是该值为String可能会导致你的程序计算不对。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/12/2017-01-12/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2016-12-29" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/29/2016-12-29/">vue-cli与node6.x、win10x64的不兼容</a>
-    </h1>
-  
-
-        <a href="/2016/12/29/2016-12-29/" class="archive-article-date">
-  	<time datetime="2016-12-29T11:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在很久之前，自己搭建了一套vue框架。运用了vuex、vue-router、vue-resource 等等的一套比较完成的Demo。<br>最近无意间升级了node^6.2.0、公司的电脑系统为win10 x64,<br>然后整个vue都启动不了了。而同样的环境 mac是可以的。很是费解。</p>
-<p>提示的错误是不识别es6。找了一天走了很多弯路，以为是webpack问题、babel问题。其实都不是。</p>
-<p>最后找到了一个人这么说：<br>The vuejs-templates/webpack seems to have problems with Node ^6.0.0 running on Windows 10 x64, something with Babel not transpiling JavaScript files before the Webpack build. I filled an issue in the repo, hope it gets fixed soom to come back to the latest Node release.</p>
-<p>我便把node升级到7。可以了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/29/2016-12-29/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2016-12-23" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/23/2016-12-23/">数组去重装X法</a>
-    </h1>
-  
-
-        <a href="/2016/12/23/2016-12-23/" class="archive-article-date">
-  	<time datetime="2016-12-23T08:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-23</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不少公司招聘web前端时，免不了需要让面试者做题。本片主要讲一下当遇到数组去重的问题时，怎样让考官一瞬间懵逼。</p>
-<h3 id="一、for循环依次进行筛选"><a href="#一、for循环依次进行筛选" class="headerlink" title="一、for循环依次进行筛选"></a>一、for循环依次进行筛选</h3><p>这个网上太多了，随便搜搜就找到一大堆。</p>
-<h3 id="二、用filter特性"><a href="#二、用filter特性" class="headerlink" title="二、用filter特性"></a>二、用filter特性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> removeRepeat(arr)&#123;</div><div class="line">  <span class="built_in">return</span> arr.filter(<span class="keyword">function</span>(elem, pos) &#123;</div><div class="line">    <span class="built_in">return</span> arr.indexOf(elem) == pos;</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var arr = new Array(<span class="string">"1"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>,<span class="string">"4"</span>,<span class="string">"4"</span>,<span class="string">"4"</span>,<span class="string">"4"</span>,<span class="string">"5"</span>);</div><div class="line">var newArr = removeRepeat(arr);</div><div class="line">console.log(newArr);</div></pre></td></tr></table></figure>
-<p>利用filter特性达到数组去重。</p>
-<h3 id="三、装X让面试官暂时懵逼的方法"><a href="#三、装X让面试官暂时懵逼的方法" class="headerlink" title="三、装X让面试官暂时懵逼的方法"></a>三、装X让面试官暂时懵逼的方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,2,3,4,1,4,2],str = <span class="string">''</span>; </div><div class="line">var result = (<span class="keyword">function</span> unique(num, arr, str) &#123; </div><div class="line">     <span class="built_in">return</span> arr.length &gt; 0 ? unique(arr.shift(), arr, str.indexOf(num) == -1 ? str += num : str) : str.split(<span class="string">''</span>); </div><div class="line">&#125;)(arr.shift(), arr, str);</div></pre></td></tr></table></figure>
-<p>简单介绍一下思路，该方法是用回调和Array.shift()代替for循环，用三目代替if，增加严谨的逻辑，让人一时琢磨不透。总体思路每次获得数组的第一位元素，判断str内是否存在，如果存在继续回调，如果不存在插入，直到数组没有元素。<br>面试官很大可能会让你讲解这段代码，你的装X时间开始了….</p>
-<p>如果同学们有更好的方法 可以发送邮件到 <a href="mailto://fighterdiwen@163.com" target="_blank" rel="external">fighterdiwen@163.com</a> 咱们一起进行交流。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/23/2016-12-23/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/23/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Hello World
     </h1>
   
 
@@ -381,6 +173,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -388,26 +201,85 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/23/hello-world/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/12/23/hello-world/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
-
-
-
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/23/2016-12-23/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数组去重装X法
+        
+      </div>
+    </a>
   
   
+</nav>
+
+
+
+
+
+
+
 
 
           </div>
@@ -429,8 +301,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
