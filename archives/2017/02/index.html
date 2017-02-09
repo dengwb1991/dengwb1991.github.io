@@ -6,21 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>细节注意（一） - 浏览器缓存 | Dengwb Blog</title>
+  <title>Archives: 2017/2 | Dengwb Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作localStorage、sessionStorage对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。所以当你存储Object或者Array时，一定要转化为String。
-1localStor">
-<meta property="og:type" content="article">
-<meta property="og:title" content="细节注意（一） - 浏览器缓存">
-<meta property="og:url" content="http://yoursite.com/2017/01/12/2017-01-12/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Dengwb Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2017/02/index.html">
 <meta property="og:site_name" content="Dengwb Blog">
-<meta property="og:description" content="操作localStorage、sessionStorage对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。所以当你存储Object或者Array时，一定要转化为String。
-1localStor">
-<meta property="og:updated_time" content="2017-01-12T12:24:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="细节注意（一） - 浏览器缓存">
-<meta name="twitter:description" content="操作localStorage、sessionStorage对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。所以当你存储Object或者Array时，一定要转化为String。
-1localStor">
+<meta name="twitter:title" content="Dengwb Blog">
   
     <link rel="alternative" href="/atom.xml" title="Dengwb Blog" type="application/atom+xml">
   
@@ -142,148 +135,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2017-01-12" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      细节注意（一） - 浏览器缓存
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/02/09/2017-02-09/" class="archive-article-date">
+  	<time datetime="2017-02-09T03:44:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/02/09/2017-02-09/">事件捕获与事件冒泡</a>
     </h1>
   
 
-        <a href="/2017/01/12/2017-01-12/" class="archive-article-date">
-  	<time datetime="2017-01-12T11:58:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-12</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="操作localStorage、sessionStorage"><a href="#操作localStorage、sessionStorage" class="headerlink" title="操作localStorage、sessionStorage"></a>操作localStorage、sessionStorage</h3><p>对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。<br>要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。<br>所以当你存储Object或者Array时，一定要转化为String。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, [1, 2, 3]);</div></pre></td></tr></table></figure>
-<p>这样操作后，你所存的arr会是 1,2,3;</p>
-<p>正确的方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, JSON.stringify([1, 2, 3]));</div></pre></td></tr></table></figure></p>
-<p>这样操作后，你所存的arr会是[1,2,3];</p>
-<p>而获取时要想获得数组的话，需要<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JSON.parse(<span class="built_in">local</span>Storage.getItem(<span class="string">'arr'</span>));</div></pre></td></tr></table></figure></p>
-<p>同理操作Object也是需要这样操作。</p>
-<p>最最要注意的是如果你要set一个Number，取出来的时候要进行转化，否则运算是该值为String可能会导致你的程序计算不对。</p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>不要钱<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/01/12/2017-01-12/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/01/18/2017-01-18/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          细节注意（二） - for in
-        
-      </div>
-    </a>
   
   
-    <a href="/2016/12/29/2016-12-29/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue-cli与node6.x、win10x64的不兼容</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-
-
-
-
-
+    
 
 
           </div>
@@ -306,8 +200,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

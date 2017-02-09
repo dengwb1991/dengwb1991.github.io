@@ -6,21 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>细节注意（一） - 浏览器缓存 | Dengwb Blog</title>
+  <title>事件捕获与事件冒泡 | Dengwb Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作localStorage、sessionStorage对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。所以当你存储Object或者Array时，一定要转化为String。
-1localStor">
+  <meta name="description" content="前言这里首先要先讲一下什么是事件、事件流：事件：浏览器执行的动作，如click、load等。事件流：事件发生时会在元素节点与根节点之间按照特定的顺序传播，路径所经过的所有节点都会收到该事件，这个传播过程即DOM事件流。
+正文123&amp;lt;div id=&quot;outer&quot;&amp;gt;  &amp;lt;div id=&quot;inner&quot;&amp;gt;Click me!&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+上面代码中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="细节注意（一） - 浏览器缓存">
-<meta property="og:url" content="http://yoursite.com/2017/01/12/2017-01-12/index.html">
+<meta property="og:title" content="事件捕获与事件冒泡">
+<meta property="og:url" content="http://yoursite.com/2017/02/09/2017-02-09/index.html">
 <meta property="og:site_name" content="Dengwb Blog">
-<meta property="og:description" content="操作localStorage、sessionStorage对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。所以当你存储Object或者Array时，一定要转化为String。
-1localStor">
-<meta property="og:updated_time" content="2017-01-12T12:24:54.000Z">
+<meta property="og:description" content="前言这里首先要先讲一下什么是事件、事件流：事件：浏览器执行的动作，如click、load等。事件流：事件发生时会在元素节点与根节点之间按照特定的顺序传播，路径所经过的所有节点都会收到该事件，这个传播过程即DOM事件流。
+正文123&amp;lt;div id=&quot;outer&quot;&amp;gt;  &amp;lt;div id=&quot;inner&quot;&amp;gt;Click me!&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+上面代码中">
+<meta property="og:updated_time" content="2017-02-09T07:08:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="细节注意（一） - 浏览器缓存">
-<meta name="twitter:description" content="操作localStorage、sessionStorage对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。所以当你存储Object或者Array时，一定要转化为String。
-1localStor">
+<meta name="twitter:title" content="事件捕获与事件冒泡">
+<meta name="twitter:description" content="前言这里首先要先讲一下什么是事件、事件流：事件：浏览器执行的动作，如click、load等。事件流：事件发生时会在元素节点与根节点之间按照特定的顺序传播，路径所经过的所有节点都会收到该事件，这个传播过程即DOM事件流。
+正文123&amp;lt;div id=&quot;outer&quot;&amp;gt;  &amp;lt;div id=&quot;inner&quot;&amp;gt;Click me!&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+上面代码中">
   
     <link rel="alternative" href="/atom.xml" title="Dengwb Blog" type="application/atom+xml">
   
@@ -142,32 +145,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2017-01-12" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2017-02-09" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      细节注意（一） - 浏览器缓存
+      事件捕获与事件冒泡
     </h1>
   
 
-        <a href="/2017/01/12/2017-01-12/" class="archive-article-date">
-  	<time datetime="2017-01-12T11:58:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-12</time>
+        <a href="/2017/02/09/2017-02-09/" class="archive-article-date">
+  	<time datetime="2017-02-09T03:44:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="操作localStorage、sessionStorage"><a href="#操作localStorage、sessionStorage" class="headerlink" title="操作localStorage、sessionStorage"></a>操作localStorage、sessionStorage</h3><p>对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。<br>要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。<br>所以当你存储Object或者Array时，一定要转化为String。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, [1, 2, 3]);</div></pre></td></tr></table></figure>
-<p>这样操作后，你所存的arr会是 1,2,3;</p>
-<p>正确的方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, JSON.stringify([1, 2, 3]));</div></pre></td></tr></table></figure></p>
-<p>这样操作后，你所存的arr会是[1,2,3];</p>
-<p>而获取时要想获得数组的话，需要<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JSON.parse(<span class="built_in">local</span>Storage.getItem(<span class="string">'arr'</span>));</div></pre></td></tr></table></figure></p>
-<p>同理操作Object也是需要这样操作。</p>
-<p>最最要注意的是如果你要set一个Number，取出来的时候要进行转化，否则运算是该值为String可能会导致你的程序计算不对。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里首先要先讲一下什么是事件、事件流：<br><strong>事件：</strong>浏览器执行的动作，如click、load等。<br><strong>事件流：</strong>事件发生时会在元素节点与根节点之间按照特定的顺序传播，路径所经过的所有节点都会收到该事件，这个传播过程即DOM事件流。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"outer"</span>&gt;</div><div class="line">  &lt;div id=<span class="string">"inner"</span>&gt;Click me!&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>上面代码中，如果两个元素都绑定了click事件，当点击后函数会怎样触发呢？</p>
+<p>为了解决这个问题微软和网景提出了两种几乎完全相反的概念，<strong>事件冒泡</strong>、<strong>事件捕获</strong>。</p>
+<p><strong>事件冒泡：</strong>事件会从最内层的元素开始发生，一直向上传播，直到document对象。<br><em>div -&gt; body -&gt; html -&gt; document</em></p>
+<p><strong>事件捕获：</strong>事件冒泡相反，事件会从最外层开始发生，直到最具体的元素。<br><em>document -&gt; html -&gt; body -&gt; div</em></p>
+<h3 id="addEventListener"><a href="#addEventListener" class="headerlink" title="addEventListener"></a>addEventListener</h3><p>为了更清楚的理解事件捕获与事件冒泡，进一步了解addEventListener方法。<br>addEventListener方法用来为一个特定的元素绑定一个事件处理函数，是JavaScript中的常用方法。addEventListener有三个参数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.addEventListener(event, <span class="keyword">function</span>, useCapture)</div></pre></td></tr></table></figure></p>
+<p><strong>event：</strong>字符串，指定事件名，如click、blur等。<br><strong>function：</strong>指定事件触发时执行的函数。<br>useCapture: 可选，Boolean，指定事件是否在捕获或冒泡阶段执行，true-事件句柄在捕获阶段执行，false-默认，事件句柄在冒泡阶段执行。</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.<span class="variable">$outerDiv</span> = document.getElementById(<span class="string">'outerDiv'</span>);</div><div class="line">this.<span class="variable">$innerDiv</span> = document.getElementById(<span class="string">'innerDiv'</span>);</div><div class="line">this.<span class="variable">$outerDiv</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</div><div class="line">  alert(<span class="string">'I am outer div'</span>);</div><div class="line">&#125;, <span class="literal">true</span>);</div><div class="line">this.<span class="variable">$innerDiv</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</div><div class="line">  alert(<span class="string">'I am inner div'</span>);</div><div class="line">&#125;, <span class="literal">true</span>);</div><div class="line">&lt;div id=<span class="string">"outer"</span>&gt;</div><div class="line">  &lt;div id=<span class="string">"inner"</span>&gt;Click me!&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>useCapture为true，事件句柄在捕获阶段执行，所以alert顺序为 I am outer div , I am inner div。<br>如果useCapture为false，事件句柄在冒泡阶段执行，顺序与上方相反。<a href="http://www.dengwb.com/app/html/jsBasis_capture_bubble.html" target="_blank" rel="external">实践操作</a></p>
+<p>如果想终止捕获或冒泡。添加<strong>event.stopPropagation()</strong>方法。</p>
 
       
 
@@ -247,7 +253,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/01/12/2017-01-12/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/09/2017-02-09/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,18 +267,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/18/2017-01-18/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          细节注意（二） - for in
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/12/29/2016-12-29/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue-cli与node6.x、win10x64的不兼容</div>
+    <a href="/2017/01/18/2017-01-18/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">细节注意（二） - for in</div>
       <i class="icon-circle-right"></i>
     </a>
   
