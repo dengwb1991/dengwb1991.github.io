@@ -1,657 +1,497 @@
 <!DOCTYPE html>
-<html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Dengwb Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dengwb Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Dengwb Blog">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dengwb Blog">
-  
-    <link rel="alternative" href="/atom.xml" title="Dengwb Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
-  
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Dengwb Blog">
+    <meta name="author" content="Dengwb">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Dengwb Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
 
   
+  
+  
 
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-<body>
-  <div id="container" q-class="show:isCtnShow">
-    <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
-      <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="http://www.dengwb.com/app/images/public/wumi.jpg" class="js-avatar">
-		</a>
-
-		<hgroup>
-		  <h1 class="header-author"><a href="/">Dengwb</a></h1>
-		</hgroup>
-
-		
-
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/">主页</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu">
-	        
-    		
-    			
-    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-    			
-            
-    			
-    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-    			
-            
-    			
-    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-    			
-            
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
-			</div>
-		</nav>
-	</header>		
-</div>
-
-    </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"><i class="icon-sort"></i></div>
-  		<h1 class="header-author js-mobile-header hide">Dengwb</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img src="http://www.dengwb.com/app/images/public/wumi.jpg" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">Dengwb</h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-		        
-		        	<li><a href="/archives/">所有文章</a></li>
-		        
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-
-      <div id="wrapper" class="body-wrap">
-        <div class="menu-l">
-          <div class="canvas-wrap">
-            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
-          </div>
-          <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2017-02-09" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/09/2017-02-09/">事件捕获与事件冒泡</a>
-    </h1>
-  
-
-        <a href="/2017/02/09/2017-02-09/" class="archive-article-date">
-  	<time datetime="2017-02-09T03:44:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-09</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里首先要先讲一下什么是事件、事件流：<br><strong>事件：</strong>浏览器执行的动作，如click、load等。<br><strong>事件流：</strong>事件发生时会在元素节点与根节点之间按照特定的顺序传播，路径所经过的所有节点都会收到该事件，这个传播过程即DOM事件流。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"outer"</span>&gt;</div><div class="line">  &lt;div id=<span class="string">"inner"</span>&gt;Click me!&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>上面代码中，如果两个元素都绑定了click事件，当点击后函数会怎样触发呢？</p>
-<p>为了解决这个问题微软和网景提出了两种几乎完全相反的概念，<strong>事件冒泡</strong>、<strong>事件捕获</strong>。</p>
-<p><strong>事件冒泡：</strong>事件会从最内层的元素开始发生，一直向上传播，直到document对象。<br><em>div -&gt; body -&gt; html -&gt; document</em></p>
-<p><strong>事件捕获：</strong>事件冒泡相反，事件会从最外层开始发生，直到最具体的元素。<br><em>document -&gt; html -&gt; body -&gt; div</em></p>
-<h3 id="addEventListener"><a href="#addEventListener" class="headerlink" title="addEventListener"></a>addEventListener</h3><p>为了更清楚的理解事件捕获与事件冒泡，进一步了解addEventListener方法。<br>addEventListener方法用来为一个特定的元素绑定一个事件处理函数，是JavaScript中的常用方法。addEventListener有三个参数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.addEventListener(event, <span class="keyword">function</span>, useCapture)</div></pre></td></tr></table></figure></p>
-<p><strong>event：</strong>字符串，指定事件名，如click、blur等。<br><strong>function：</strong>指定事件触发时执行的函数。<br>useCapture: 可选，Boolean，指定事件是否在捕获或冒泡阶段执行，true-事件句柄在捕获阶段执行，false-默认，事件句柄在冒泡阶段执行。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.<span class="variable">$outerDiv</span> = document.getElementById(<span class="string">'outerDiv'</span>);</div><div class="line">this.<span class="variable">$innerDiv</span> = document.getElementById(<span class="string">'innerDiv'</span>);</div><div class="line">this.<span class="variable">$outerDiv</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</div><div class="line">  alert(<span class="string">'I am outer div'</span>);</div><div class="line">&#125;, <span class="literal">true</span>);</div><div class="line">this.<span class="variable">$innerDiv</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</div><div class="line">  alert(<span class="string">'I am inner div'</span>);</div><div class="line">&#125;, <span class="literal">true</span>);</div><div class="line">&lt;div id=<span class="string">"outer"</span>&gt;</div><div class="line">  &lt;div id=<span class="string">"inner"</span>&gt;Click me!&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>useCapture为true，事件句柄在捕获阶段执行，所以alert顺序为 I am outer div , I am inner div。<br>如果useCapture为false，事件句柄在冒泡阶段执行，顺序与上方相反。<a href="http://www.dengwb.com/app/html/jsBasis_capture_bubble.html" target="_blank" rel="external">实践操作</a></p>
-<p>如果想终止捕获或冒泡。添加<strong>event.stopPropagation()</strong>方法。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/09/2017-02-09/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-01-18" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/18/2017-01-18/">细节注意（二） - for in</a>
-    </h1>
-  
-
-        <a href="/2017/01/18/2017-01-18/" class="archive-article-date">
-  	<time datetime="2017-01-18T08:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="官方"><a href="#官方" class="headerlink" title="官方"></a>官方</h2><p>for..in 语句用于对数组或者对象的属性进行循环操作。<br>循环中的代码每执行一次，就会对数组的元素或者对象的属性进行一次操作。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>如果为Array的原型链添加属性方法的话，该属性方法会执行一次。<br>如果遍历的数组内存储的不是Object 尽量别用for..in</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/18/2017-01-18/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-01-12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/12/2017-01-12/">细节注意（一） - 浏览器缓存</a>
-    </h1>
-  
-
-        <a href="/2017/01/12/2017-01-12/" class="archive-article-date">
-  	<time datetime="2017-01-12T11:58:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-12</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="操作localStorage、sessionStorage"><a href="#操作localStorage、sessionStorage" class="headerlink" title="操作localStorage、sessionStorage"></a>操作localStorage、sessionStorage</h3><p>对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。<br>要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。<br>所以当你存储Object或者Array时，一定要转化为String。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, [1, 2, 3]);</div></pre></td></tr></table></figure>
-<p>这样操作后，你所存的arr会是 1,2,3;</p>
-<p>正确的方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">local</span>Storage.setItem(<span class="string">'arr'</span>, JSON.stringify([1, 2, 3]));</div></pre></td></tr></table></figure></p>
-<p>这样操作后，你所存的arr会是[1,2,3];</p>
-<p>而获取时要想获得数组的话，需要<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JSON.parse(<span class="built_in">local</span>Storage.getItem(<span class="string">'arr'</span>));</div></pre></td></tr></table></figure></p>
-<p>同理操作Object也是需要这样操作。</p>
-<p>最最要注意的是如果你要set一个Number，取出来的时候要进行转化，否则运算是该值为String可能会导致你的程序计算不对。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/12/2017-01-12/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2016-12-29" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/29/2016-12-29/">vue-cli与node6.x、win10x64的不兼容</a>
-    </h1>
-  
-
-        <a href="/2016/12/29/2016-12-29/" class="archive-article-date">
-  	<time datetime="2016-12-29T11:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在很久之前，自己搭建了一套vue框架。运用了vuex、vue-router、vue-resource 等等的一套比较完成的Demo。<br>最近无意间升级了node^6.2.0、公司的电脑系统为win10 x64,<br>然后整个vue都启动不了了。而同样的环境 mac是可以的。很是费解。</p>
-<p>提示的错误是不识别es6。找了一天走了很多弯路，以为是webpack问题、babel问题。其实都不是。</p>
-<p>最后找到了一个人这么说：<br>The vuejs-templates/webpack seems to have problems with Node ^6.0.0 running on Windows 10 x64, something with Babel not transpiling JavaScript files before the Webpack build. I filled an issue in the repo, hope it gets fixed soom to come back to the latest Node release.</p>
-<p>我便把node升级到7。可以了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/29/2016-12-29/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2016-12-23" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/23/2016-12-23/">数组去重装X法</a>
-    </h1>
-  
-
-        <a href="/2016/12/23/2016-12-23/" class="archive-article-date">
-  	<time datetime="2016-12-23T08:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-23</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不少公司招聘web前端时，免不了需要让面试者做题。本片主要讲一下当遇到数组去重的问题时，怎样让考官一瞬间懵逼。</p>
-<h3 id="一、for循环依次进行筛选"><a href="#一、for循环依次进行筛选" class="headerlink" title="一、for循环依次进行筛选"></a>一、for循环依次进行筛选</h3><p>这个网上太多了，随便搜搜就找到一大堆。</p>
-<h3 id="二、用filter特性"><a href="#二、用filter特性" class="headerlink" title="二、用filter特性"></a>二、用filter特性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> removeRepeat(arr)&#123;</div><div class="line">  <span class="built_in">return</span> arr.filter(<span class="keyword">function</span>(elem, pos) &#123;</div><div class="line">    <span class="built_in">return</span> arr.indexOf(elem) == pos;</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var arr = new Array(<span class="string">"1"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>,<span class="string">"4"</span>,<span class="string">"4"</span>,<span class="string">"4"</span>,<span class="string">"4"</span>,<span class="string">"5"</span>);</div><div class="line">var newArr = removeRepeat(arr);</div><div class="line">console.log(newArr);</div></pre></td></tr></table></figure>
-<p>利用filter特性达到数组去重。</p>
-<h3 id="三、装X让面试官暂时懵逼的方法"><a href="#三、装X让面试官暂时懵逼的方法" class="headerlink" title="三、装X让面试官暂时懵逼的方法"></a>三、装X让面试官暂时懵逼的方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,2,3,4,1,4,2],str = <span class="string">''</span>; </div><div class="line">var result = (<span class="keyword">function</span> unique(num, arr, str) &#123; </div><div class="line">     <span class="built_in">return</span> arr.length &gt; 0 ? unique(arr.shift(), arr, str.indexOf(num) == -1 ? str += num : str) : str.split(<span class="string">''</span>); </div><div class="line">&#125;)(arr.shift(), arr, str);</div></pre></td></tr></table></figure>
-<p>简单介绍一下思路，该方法是用回调和Array.shift()代替for循环，用三目代替if，增加严谨的逻辑，让人一时琢磨不透。总体思路每次获得数组的第一位元素，判断str内是否存在，如果存在继续回调，如果不存在插入，直到数组没有元素。<br>面试官很大可能会让你讲解这段代码，你的装X时间开始了….</p>
-<p>如果同学们有更好的方法 可以发送邮件到 <a href="mailto://fighterdiwen@163.com" target="_blank" rel="external">fighterdiwen@163.com</a> 咱们一起进行交流。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/23/2016-12-23/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <a href="/2016/12/23/hello-world/" class="archive-article-date">
-  	<time datetime="2016-12-23T08:36:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-23</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/23/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-
-
-          </div>
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
         </div>
-      </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2018 Dengwb
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
-    </div>
-    <script>
-	var yiliaConfig = {
-		mathjax: false,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false,
-		root: "/",
-		innerArchive: true
-	}
-</script>
-
-<script src="/./main.js?v=4.0.0.js"></script>
-
-
-    
-<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
-  <div class="tools-wrap">
-    
-    	<section class="tools-section tools-section-all" q-show="innerArchive">
-        <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
-          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
-          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
-        </div>
-        <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
-          <label class="search-switch">
-            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
-          </label>
-          <ul class="article-tag-list" q-show="showTags">
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
             
-            <div class="clearfix"></div>
-          </ul>
-        </div>
-        <ul class="search-ul">
-          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
-            2、在根目录_config.yml里添加配置：
-<pre style="font-size: 12px;" q-show="jsonFail">
-  jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: true
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
-</pre>
-          </p>
-          <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
-            <p class="search-time">
-              <i class="icon-calendar icon"></i>
-              <span q-text="date|dateformat"></span>
-            </p>
-            <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
-              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
-            </p>
-          </li>
-        </ul>
-    	</section>
-    
-
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://www.dengwb.com/app/html/index.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个人网站</a>
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://notes.dengwb.com/" class="animsition-link">Notes</a></li>
+                    
+                    <li><a href="https://github.com/dengwb1991" class="animsition-link">Github</a></li>
+                    
+                </ul>
             </li>
-          
+            
         </ul>
-  		
-    	</section>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <!-- li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li -->
+        </ul>
+    </div>
     
+    <!-- ============================ END Off-canvas navigation =========================== -->
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">热爱工作、热爱生活&lt;br&gt;&lt;br&gt;邮箱：fighterdiwen@163.com&lt;br&gt;&lt;br&gt;QQ：441512961</div>
-  	  	
-    	</section>
-    
-  </div>
-  
-</div>
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
 
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
 
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
+        <!-- ============================ Header & Logo bar =========================== -->
 
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Dengwb Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/dengwb1991" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
         </div>
 
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
+        <!-- ============================ Header & Logo bar =========================== -->
 
-            <div class="pswp__top-bar">
 
-                <!--  Controls are self-explanatory. Order can be changed. -->
+      <!-- ============================ Hero Image =========================== -->
 
-                <div class="pswp__counter"></div>
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
 
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
                     </div>
                 </div>
             </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
+            <!-- // .col-md-12 -->
         </div>
-
+        <div class="herofade beige-dk"></div>
     </div>
+</section>
 
-</div>
-  </div>
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
+
+<section id="intro">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/15/Programmer-s-self-cultivation/">程序员的自我修养-读后感</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-15T11:11:21.000Z" itemprop="datePublished">
+          2018-10-15
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+程序员的10点启示
+1、尽早确定你想做的事情尽早确定你想做的事情，减少走弯路，往往程序员工作数年后，转行的成本会非常高，虽然有个别成功的案例，但这也只是极少数，制定你的职业目标，并持续努力地接近并达到这个目标。
+2、比一般人更加努力
+10 000小时定律
+
+优秀的程序员往往会被带上天才、高智商的标签，但是这些优秀的人往往在你看不到的时候，会花更多的时间去工作或者学习，当你也坚持这么做的时候，你也会变得一样优秀。
+一万小时定律是作家格拉
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/15/Programmer-s-self-cultivation/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/02/09/2017-02-09/">事件捕获与事件冒泡</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-02-09T03:44:35.000Z" itemprop="datePublished">
+          2017-02-09
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        前言这里首先要先讲一下什么是事件、事件流：事件：浏览器执行的动作，如click、load等。事件流：事件发生时会在元素节点与根节点之间按照特定的顺序传播，路径所经过的所有节点都会收到该事件，这个传播过程即DOM事件流。
+正文123&lt;div id="outer"&gt;  &lt;div id="inner"&gt;Click me!&lt;/div&gt;&lt;/div&gt;
+上面代码中，如果两个元素都绑定了click事件，当
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/02/09/2017-02-09/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/01/18/2017-01-18/">细节注意（二） - for in</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-01-18T08:32:12.000Z" itemprop="datePublished">
+          2017-01-18
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        官方for..in 语句用于对数组或者对象的属性进行循环操作。循环中的代码每执行一次，就会对数组的元素或者对象的属性进行一次操作。
+注意如果为Array的原型链添加属性方法的话，该属性方法会执行一次。如果遍历的数组内存储的不是Object 尽量别用for..in
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/01/18/2017-01-18/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/01/12/2017-01-12/">细节注意（一） - 浏览器缓存</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-01-12T11:58:26.000Z" itemprop="datePublished">
+          2017-01-12
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        操作localStorage、sessionStorage对于前端开发工程师操作浏览器缓存很普遍，本文主要介绍操作localStorage和sessionStorage需要哪些注意。要注意localStorage和sessionStorage是key, value存储，而key和value只能为String。所以当你存储Object或者Array时，一定要转化为String。
+1localStorage.setItem('arr', [
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/01/12/2017-01-12/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/12/29/2016-12-29/">vue-cli与node6.x、win10x64的不兼容</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-12-29T11:32:10.000Z" itemprop="datePublished">
+          2016-12-29
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在很久之前，自己搭建了一套vue框架。运用了vuex、vue-router、vue-resource 等等的一套比较完成的Demo。最近无意间升级了node^6.2.0、公司的电脑系统为win10 x64,然后整个vue都启动不了了。而同样的环境 mac是可以的。很是费解。
+提示的错误是不识别es6。找了一天走了很多弯路，以为是webpack问题、babel问题。其实都不是。
+最后找到了一个人这么说：The vuejs-template
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/12/29/2016-12-29/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/12/23/2016-12-23/">数组去重装X法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-12-23T08:38:52.000Z" itemprop="datePublished">
+          2016-12-23
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        不少公司招聘web前端时，免不了需要让面试者做题。本片主要讲一下当遇到数组去重的问题时，怎样让考官一瞬间懵逼。
+一、for循环依次进行筛选这个网上太多了，随便搜搜就找到一大堆。
+二、用filter特性123456789function removeRepeat(arr)&#123;  return arr.filter(function(elem, pos) &#123;    return arr.indexOf(elem) == p
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/12/23/2016-12-23/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/12/23/hello-world/">Hello World</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-12-23T08:36:02.000Z" itemprop="datePublished">
+          2016-12-23
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new p
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/12/23/hello-world/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          
+          
+        </nav>
+    </div>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p></p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Dengwb. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/dengwb1991" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
 </body>
 </html>
